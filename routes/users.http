@@ -1,0 +1,34 @@
+GET http://localhost:5050/users
+
+###########
+
+POST http://localhost:5050/users/new HTTP/1.1
+content-type: application/json
+
+{
+    "firstname": "Luca",
+    "lastname": "Marangotto",
+    "email": "lucatecktonik@gmail.com",
+    "password": "Tester@",
+    "age": "29"
+}
+
+###########
+
+PATCH http://localhost:5050/users/89635f456673a1e813f062 HTTP/1.1
+content-type: application/json
+
+{
+    "firstname": "Luca",
+    "lastname": "Marangotto",
+    "email": "lucatecktonik@gmail",
+    "password": "Tester@",
+    "age": "29"
+}
+
+
+###########
+
+
+
+DELETE http://localhost:5050/users/delete/89635f456673a1e813f062
